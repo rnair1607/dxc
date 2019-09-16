@@ -1,0 +1,48 @@
+<html>
+    <head><title>Register</title></head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>User ID: <input type="text" name="userId" id="userId"/></td>
+                </tr>
+                <tr>
+                    <td>Password: <input type="password" name="password" id="password"/></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password: <input type="password" name="confirmPassword" id="confirmPassword"/></td>
+                </tr>
+                <tr>
+                    <td>Full Name: <input type="text" name="fullName" id="fullName"/></td>
+                </tr>
+                <tr>
+                    <td>Gender: <input type="radio" name="gender" id="male" value="male"/>Male</td>
+                    <td><input type="radio" name="gender" id="female" value="female"/>Female</td>
+                    <td><input type="radio" name="gender" id="other" value="other"/>other</td>
+                </tr>
+                <tr>
+                    <td>Qualification</td>
+                    <td>
+                        <select name="Qualification" id="qualification">
+                            <option value="---">Select Option</option>
+                            <option value="B.Tech">B.tech</option>
+                            <option value="BSc">BSc</option>
+                            <option value="M.Tech">M.tech</option>
+                            <option value="BCA">BCA</option>
+                            <option value="MCA">MCA</option>
+                            <option value="MBA">MBA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>alert by:</td><td><input type="checkbox" name="alert" id="alert" value="SMS"/>SMS</td><td><input type="checkbox" name="alert" id="alert" value="mail"/>mail</td>
+                </tr>
+                <tr>
+                    <td><input type="submit"  value="submit"/></td><td><input type="reset" value="clear"/></td>
+                </tr>
+            </table>
+                                                                                
+        </form>
+    </body>
+
+</html>
