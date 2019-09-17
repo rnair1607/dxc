@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function add(){
+                var numb1=parseInt(document.getElementById("num1").value);
+                var numb2=parseInt(document.getElementById("num2").value);
+                var div1 = document.getElementById("1");
+                div1.innerHTML=`${numb1} + ${numb2} = ${numb1 + numb2}`;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <table cellspacing="30">
+                <tr><td>1st no:</td><td> <input type="text" name="num1" id="num1"></td></tr>
+                <tr><td>2nd no:</td><td><input type="text" name="num2" id="num2"></td></tr>
+                <tr><td><input type="button" value="add" onClick="add()"></td><td><div id="1"></div></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
