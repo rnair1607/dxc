@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function add()
+            {
+                var mainDiv = document.getElementById("myDiv");
+                var newDiv = document.createElement('Div');
+                newDiv.setAttribute('id','innerDiv');
+
+                var newSpan = document.createElement('span');
+                newSpan.setAttribute('id','mySpan');
+                newSpan.innerHTML = "Username : ";
+
+                var newTextBox = document.createElement('input');
+                newTextBox.setAttribute = ('type','text');
+                newTextBox.setAttribute = ('id','myText');
+
+                myDiv.appendChild(newDiv);
+                newDiv.appendChild(newSpan);
+                newDiv.appendChild(newTextBox);
+            }
+        
+        </script>
+    </head>
+    <body>
+        <div id="myDiv">
+            <input type="button" value="add" id="addId" onclick="add()">
+        </div>
+
+    </body>
+</html>
