@@ -1,0 +1,75 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function addTable(){
+                var userName = document.getElementById("nameId").value;
+                var pricing = document.getElementById("priceId").value;
+                var divSpace = document.getElementById("myDiv");
+                
+                var newTable = document.createElement('table');
+                newTable.setAttribute('id','table1');
+                
+                var newRow = document.createElement('tr');
+                newRow.setAttribute('id','row1');
+                
+                var newData1 = document.createElement('td');
+                newData1.setAttribute('id','data1');
+
+                var newData2 = document.createElement('td');
+                newData1.setAttribute('id','data2');
+
+                newData1.appendChild(userName);
+                newData2.appendChild(pricing);
+                newRow.appendChild(newData1);
+                newRow.appendChild(newData2);
+                newTable.appendChild(newRow);
+                divSpace.appendChild(newTable);
+                
+
+
+                
+                
+                
+
+
+            }
+        
+        </script>
+        <h1 align="center">Cart</h1>
+        <form>
+            <table cellpadding="10" cellspacing="10">
+                <tr>
+                    <td>
+                        Name: 
+                    </td>
+                    <td>
+                        <input type="text" id="nameId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Price: 
+                    </td>
+                    <td>
+                        <input type="text" id="priceId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="Add" onclick="addTable()">Add</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="myDiv">
+                <table id="oldTable" cellspacing="10" cellpadding="10">
+                    <th>
+                        <td><b>Name</b></td><td><b>Price</b></td>
+                    </th>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>
