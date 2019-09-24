@@ -1,0 +1,49 @@
+<html>
+    <head>
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script
+                    src="https://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossorigin="anonymous">
+    
+            </script>
+            <script>
+            $(document).ready(function(){
+                $("input").focus(function(){
+                    $(this).css("background-color","red");
+                })
+                $("input").blur(function(){
+                    $(this).css("background-color","green");
+                })
+            })
+            </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                
+                    <div class="col-md-3 offset-md-3">
+                        Username:
+
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control">
+
+                    </div>
+                 
+            </div>
+            <div class="row">
+                
+                    <div class="col-md-3 offset-md-3">
+                        Password:
+    
+                    </div>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control">
+    
+                    </div>  
+                             
+            </div>
+        </div>
+    </body>
+</html>
