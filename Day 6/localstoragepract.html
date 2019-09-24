@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function addData(){
+                var userName = document.getElementById("uname").value;
+                localStorage.setItem("Usrname",userName);
+            }
+            function retrData(){
+                if(localStorage.Usrname){
+                    document.f1.uname.value = localStorage["Usrname"];
+                }
+            }
+
+        </script>
+    </head>
+    <body onload="retrData()">
+        <form name="f1">
+            Name: <input type="text" name="uname" id="uname">
+            <button name="set" onclick="addData()">Set</button>
+        </form>
+    </body>
+</html>
