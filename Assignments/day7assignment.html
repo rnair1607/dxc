@@ -1,41 +1,18 @@
 <html>
     <head>
-            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <script
-                    src="https://code.jquery.com/jquery-3.4.1.min.js"
-                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                    crossorigin="anonymous"></script>
-                    <script>
-                        function check(){
-                            var textBox = document.getElementById("txtbx").value;
-                            if(textbox.value.length !=0){
-                                $("#butt").prop("disabled","false");
-                            }
-                            else{
-                                $("#butt").attr("disabled","true");
-                            }
-                            
-
-                        }
-                    </script>
+           
                         
                         
 
     </head>
     <body action="#">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 ">
-                    <input type="text" id="txtbx" class="form-control" placeholder="Max 140 characters" maxlength="10" onblur="check()">
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <input type="submit" id="butt" disabled="true">
-                </div>
-            </div>
-        </div>
+        
+            
+                    <input type="text" id="txtbx" class="form-control" placeholder="Max 140 characters" maxlength="10" onkeyup="if(this.textLength != 0){butt.disabled = false} else{done.disabled= true}">
+                    <br>
+                
+                    <button id="butt" disabled="true">OK</button>
+                
         
     </body>
 </html>
