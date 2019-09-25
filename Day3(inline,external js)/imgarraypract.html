@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function changeimg(index,im){
+                
+                document.images[index].src = im; 
+            }
+        </script>
+    </head>
+    <body>
+        <table cellpadding="10" cellspacing="10">
+            <tr>
+                <td><
+                    img src="dxc.jpg">
+                </td>
+                <td>
+                    <img src="dxc.jpg">
+                </td>
+                <td>
+                    <img src="dxc.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Apple" onclick="changeimg('0','apple.jpg')"
+                </td>
+                <td>
+                    <input type="button" value="Ball" onclick="changeimg('1','ball.png')"
+                </td>
+                <td>
+                    <input type="button" value="Cat" onclick="changeimg('2','cat.jpg')"
+                </td>    
+            </tr>
+        
+        </table>
+    </body>
+</html>

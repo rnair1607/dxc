@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function addoption(p,q){
+                len1=q.options.length;
+                option0=new Option(p.value,p.value);
+                if(p.value.length!=0){
+                    q.options[len1]=option0;
+                }
+                }
+            function removeoption(p,q){
+                len1 = q.options.length;
+                for(i=0;i<len1;i++){
+                    if(q.options[i].value==p.value){
+                        q.options[i]=null;
+                        break;
+                    }
+                }
+                
+            }
+                
+            
+            
+        </script>
+    </head>
+    <body>
+        <form>
+          enter what to del:
+            <input type="text" name="a" onblur="removeoption(this,this.form.selectlist)"><br>
+            enter what to enter:
+            <input type="text" name="b" onblur="addoption(this,this.form.selectlist)"><br>
+            <select name="selectlist" id="selectlist">
+                <option value="--">--</option>
+                <option value="one" selected="selected">one</option>
+                <option value="second">second</option>
+            
+            </select>
+            
+            
+        </form>
+        
+    </body>
+</html>

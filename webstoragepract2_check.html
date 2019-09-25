@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            table{
+                border: 3px solid white;
+                
+                align: center;
+                transform: translate(300px,50px);
+
+            }
+
+        </style>
+        
+    </head>
+    <body>
+            <script type="text/javascript">
+                function login(){
+                    var userName = document.getElementById("usrnm").value;
+                    var passWord = document.getElementById("pswd").value;
+                    var space = document.getElementById("myDiv");
+                    localStorage.setItem("username","rahul");
+                    localStorage.setItem("password",passWord);
+                    space.innerHTML=localStorage.getItem("username");
+                }
+            </script>
+        <form id="formId">
+            <table id="table1" cellspacing="10" cellpadding="10">
+                <tr>
+                    <td>
+                        Username: 
+                    </td>
+                    <td>
+                        <input type="text" id="usrnm" placeholder="Type your username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password: 
+                    </td>
+                    <td>
+                        <input type="password" id="pswd" placeholder="Type your password here">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="login" onclick="">Login</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="myDiv"></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

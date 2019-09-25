@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            
+            function addTwoNumbers(){
+                var result= confirm("Do you want to continue?");
+                if(result==true){
+                    var num1=parseInt(prompt("Enter the first no:"));
+                    var num2=parseInt(prompt("Enter the second no:"));
+                    alert(`"${num1}" + "${num2}" = "${num1+num2}"`);
+                }
+                else{
+                    alert("Bye");
+                }
+            }
+            function displayMessage(){
+                var d = new Date();
+                if(d.getHours()>12){
+                alert("Good Afternoon!");}
+                else if(d.getHours()>16){
+                    alert("Good Evening!");
+                }
+                else{
+                    alert("Good Morning!");
+                }
+            }
+            
+        
+        
+        </script>
+    
+    
+    </head>
+    <body>
+        <input type="button" value="AddNumbers" onclick="addTwoNumbers()">
+        <input type="button" value="Message" onclick="displayMessage()">
+        
+        
+    
+    
+    
+    </body>
+
+
+</html>

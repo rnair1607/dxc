@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <title>Register</title>
+        <script  type="text/javascript">
+    function check(){
+        var userName = document.getElementById("userId").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var fullName = document.getElementById("fullName").value;
+        var gender = document.getElementsByName("gender").value;
+        var qualification = document.getElementById("qualification").value;
+        var alertBy = document.getElementsByName("alert");
+        
+        var userNameError = document.getElementById("usererror");
+        var passwordError = document.getElementById("passworderror");
+        var confirmPasswordError = document.getElementById("confirmpassworderror");
+        var fullNameError = document.getElementById("fullnameerror");
+        var genderError = document.getElementById("gendererror");
+        var qualificationError = document.getElementById("qualificationerror");
+        var alertError = document.getElementById("alerterror");
+    
+        if(userName.length == 0){
+            userNameError.innerHTML="<font color = red> Required</font>";
+            return false;
+        }
+        else{
+            userNameError.innerHTML="";
+        }
+        if(password.length==0){
+            passwordError.innerHTML="<font color = red> Please enter a password</font>";
+            return false;
+        
+        }
+        else{
+            passwordError.innerHTML="";
+        }
+        if(confirmPassword.length==0){
+            confirmPasswordError.innerHTML="<font color = red> Please enter the same password</font>";
+            return false;
+        }
+        else{
+            confirmPasswordError.innerHTML="";
+        }
+        if(confirmPassword != password){
+            confirmPasswordError.innerHTML="<font color = red>Password doesn't match</font>";
+            return false;
+        }
+        else{
+            confirmPasswordError.innerHTML="";
+        }
+        if(fullName.length == 0){
+            fullNameError.innerHTML="<font color = red>Please enter your Full Name</font>";
+            return false;
+        
+        }
+        else{
+            fullNameError.innerHTML="";
+        }
+        if(qualification == "---" ){
+            qualificationError.innerHTML="<font color=red>Please select one qualification</font>";
+            return false;
+        }
+        else{
+            qualificationError.innerHTML="";
+        }
+        var al = false;
+        for( i = 0;i<alertBy.length; i++){
+            
+            if(alertBy[i].checked == true){
+                al = true;
+                break;
+            }
+        }
+        if(al== false){
+            alertError.innerHTML="<font color=red>Please select one method to get notifications</font>";
+            return false;
+        }
+    }
+    
+        </script>
+    </head>
+    <body bgcolor="navyblue">
+        <form action="successful.html" onsubmit="return check()">
+            <table cellspacing="20" cellpadding="10" align="center">
+                <tr>
+                    <td>
+                        User ID:</td>
+                    <td> 
+                        <input type="text" name="userId" id="userId" />
+                    </td>
+                    <td>
+                        <span id="usererror"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password"/>
+                    </td>
+                    <td>
+                        <span id="passworderror"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password:
+                    </td> 
+                    <td>
+                        <input type="password" name="confirmPassword" id="confirmPassword"/>
+                    </td>
+                    <td>
+                        <span id="confirmpassworderror"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Full Name: 
+                    </td>
+                    <td>
+                        <input type="text" name="fullName" id="fullName"/>
+                    </td>
+                    <td>
+                        <span id="fullnameerror"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Gender: <input type="radio" name="gender" id="male" value="male"/>Male
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="female" value="female"/>Female
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="other" value="other"/>other
+                    </td>
+                    <td>
+                        <span id="gendererror"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Qualification</td>
+                    <td>
+                        <select name="Qualification" id="qualification">
+                            <option value="---">Select Option</option>
+                            <option value="B.Tech">B.tech</option>
+                            <option value="BSc">BSc</option>
+                            <option value="M.Tech">M.tech</option>
+                            <option value="BCA">BCA</option>
+                            <option value="MCA">MCA</option>
+                            <option value="MBA">MBA</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span id="qualificationerror"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>alert by:</td>
+                    <td>
+                        <input type="checkbox" name="alert" id="alertby" value="SMS"/>SMS
+                    </td>
+                    <td>
+                        <input type="checkbox" name="alert" id="alertby1" value="mail"/>mail
+                    </td>
+                    
+                    <td>
+                        <span id="alerterror"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <input type="submit"  value="submit"  />
+                    </td>
+                    <td>
+                        <input type="reset" value="clear"/>
+                    </td>
+                </tr>
+            </table>
+                                                                                
+        </form>
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-image: linear-gradient(to top, rgba(69, 69, 224, 0.534), rgb(98, 238, 231)) 
+            }
+        </style>
+        <script>
+            var numOfRows = 1;
+            function check()
+            {
+                numOfRows++;
+                var mainDiv = document.getElementById("myDiv");
+               
+                var newDiv = document.createElement('div');
+                newDiv.setAttribute('id','innerDiv' +numOfRows);
+
+                var newTextBox = document.createElement('input');
+                newTextBox.type = 'text';
+                newTextBox.setAttribute('id','textboxid' +numOfRows);
+
+                var newSpan = document.createElement('span');
+                newSpan.setAttribute('id','innerSpan' +numOfRows);
+
+                var newButton = document.createElement('input');
+                newButton.type = 'button';
+                newButton.value = 'remove';
+                newButton.setAttribute('id','buttonId' +numOfRows);
+                newButton.onclick = function removeelement(){
+                    mainDiv.removeChild(this.parentNode);
+
+                }
+                var newButton1 = document.createElement('input');
+                newButton.type = 'button';
+                newButton.value = 'display';
+                newButton.setAttribute('id','displayId' +numOfRows);
+                newButton.onclick = function dsiplaytext(){
+                    alert("welcome" +newButton1.value);
+
+                }
+
+                newDiv.appendChild(newSpan);
+                newDiv.appendChild(newTextBox);
+                newDiv.appendChild(newButton);
+                newDiv.appendChild(newButton1);
+                mainDiv.appendChild(newDiv);
+
+            }
+        
+        </script>
+    </head>
+    <body>
+        <form align="center">
+            <div id="myDiv">
+                <input type="text" id="textbox">
+                <input type="button" value="add more" id="addButton" onclick="check()">
+            </div>
+        </form>
+    </body>
+</html>

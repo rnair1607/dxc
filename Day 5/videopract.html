@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function playp(n){
+                myVid1 = document.getElementById("abc");
+                myVid2 = document.getElementById("abd");
+                if (n==1){
+                    myVid1.play();
+
+                }
+                else{
+                    myVid2.play();
+                }
+
+            }
+        </script>
+        <style>
+            #abc{
+                transform: translate(200px,50px);
+                width: 400px;
+            }
+            #abd{
+                transform: translate(300px,50px);
+                width: 400px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <video src="zeki.mp4"  id="abc" loop controls></video>
+        <video src="lilliput.mp4" id="abd" loop controls></video>
+        <div id="myDiv">
+            <input type="button" value="Play/Pause:1" onclick="playp('1')">
+            <input type="button" value="Play/pause:2" onclick="playp('2')">
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Login Form (Assignment)</title>
+        <script type="text/javascript">
+            function check(){
+                var userName = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var userNameError=document.getElementById("usernameerror");
+                var passwordError=document.getElementById("passworderror");
+                if(userName.length==0){
+                    userNameError.innerHTML="<font color=red>Mandatory</font>";
+                
+                
+                }
+                else if(password.length <6 || password.length >12 || password.charAt(0)!="A"){
+                    userNameError.innerHTML="";
+                    passwordError.innerHTML="<font color=yellow>Invalid</font>";
+                    
+                }
+               
+                
+                else{
+                    alert("Welcome "+userName);
+                }
+                
+            }
+        </script>
+    </head>
+    <body bgcolor="navyblue">
+    <h1 align="center">Login Form</h1>
+    <form>
+        <table cellpading="10" cellspacing="10" align="center">
+        <tr>
+            <td>Username: <input type="text" name="username" id="username"></td>
+            <td><span id="usernameerror"></span></td>
+        </tr>
+        <tr>
+            <td>Password: <input type="password" name="password" id="password"></td>
+            <td><span id="passworderror"></span></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="login" onclick="check()"></td>
+            <td><input type="reset" value="clear"></td>
+        </tr>
+        
+        </table>    
+    </form>
+    
+    </body>
+</html>
