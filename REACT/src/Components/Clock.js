@@ -1,26 +1,42 @@
-import React from 'react';
-import ReactDOM from'react-dom'
+import React, { Component } from 'react'
 
-function Clock(props) {
-    return (
-        <div>
-            <h1>Hello</h1>
-            <h2>Time: {props.date.toLocaleTimeString()}</h2>      
-        </div>
-    )
+
+class Clock extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            date: new Date()
+                 
+        }
+    }
+
+    componentDidMount()
+    {
+        this.timerID = setInterval(
+            () => this.changeCurrentDate(),
+            1000
+            
+        );
+    }
+
+    changeCurrentDate()
+    {
+        this.setState({
+            date: new Date()
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>{this.state.date.toLocaleTimeString()}</h1>
+            </div>
+        )
+    }
+
+
 }
 
-function display()
-{
-    ReactDOM.render(
-        <div>
-            <Clock date={new Date()}/>
-        </div>,
-        document.getElementById("root")
-    );
-}
-setInterval(display,1000);
 
 export default Clock
-
-
