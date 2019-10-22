@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import './RoutingDemo.css'
+import { Router, Route, Switch } from "react-router"
 
-
-class RoutingDemo extends Component {
+class Home extends Component {
     constructor(props) {
         super(props)
 
@@ -13,14 +12,13 @@ class RoutingDemo extends Component {
 
     render() {
         return (
-            <div className="myDiv">
-                <a href="Home">Home</a> | <a href="Customer">Customers</a> | <a href="Employee">Employees</a>
+            <div className="myDiv"><br></br>
+                Home Page - Welcome to DXC
                 <hr/>
-                
                 
             </div>
         )
     }
 }
 
-export default RoutingDemo
+export default Home

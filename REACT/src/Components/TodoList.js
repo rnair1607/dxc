@@ -4,10 +4,10 @@ class TodoList extends Component
     render()
     {
         
-        var createComment = function(commentText) {
-            return <li>{commentText}</li>;
-        };
-    return <ul>{this.props.comments.map(createComment)}</ul>;
+    
+    return <ul>{this.props.comments.map(function(commentText) {
+        return <li>{commentText}</li>;
+    })}</ul>;
   }
 }
 export default TodoList;

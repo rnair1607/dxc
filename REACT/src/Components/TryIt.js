@@ -103,7 +103,7 @@ ReactDOM.render(
   document.getElementById('eventHandling')
 );
 
-###############################################################import React, { Component } from 'react';
+import React, { Component } from 'react';
 import './styles.css'
 
 class CompleteFormValidation extends Component {
