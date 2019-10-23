@@ -1,0 +1,12 @@
+{
+  "name": "node-noobs",
+  "version": "1.1.1",
+  "description": "Nothing here",
+  "main": "App.js",
+  "scripts": {
+    "start": "nodemon App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul Nair",
+  "license": "ISC"
+}
