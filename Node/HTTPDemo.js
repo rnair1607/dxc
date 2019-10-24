@@ -20,13 +20,11 @@ function Start(port, route, handle) {
       request.addListener("data", function(data) {
         var chunkno=++chunkCount
         postData += data;
-        if (chunkno > ++chunkCount)
-        { fs.writeFileSync("TextboxData1.txt",postData)  
+        
+        fs.writeFileSync("./DXC/Cust/Emp/TextboxData"+chunkno+".txt",postData)  
         console.log("new file created")
-        }
-        else{
-          fs.writeFileSync("TextboxData.txt",postData)
-        }
+        
+        
         console.log("Successfully written data into TextBox: ")
 
         console.log("###started");
